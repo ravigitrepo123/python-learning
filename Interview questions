@@ -1,0 +1,49 @@
+
+Python code: Given a list something [-2, 0, 1, 1, -1] write a program that gives unique number such as a + b + c = 0, where a, b, and c are numbers from the above list."
+
+This is a variation of the 3-sum problem, where you find all unique triplets in the list that sum up to zero.
+
+Here’s a Python solution:
+
+def three_sum(nums):
+    nums.sort()
+    result = set()
+    n = len(nums)
+
+    for i in range(n):
+        left = i + 1
+        right = n - 1
+
+        while left < right:
+            total = nums[i] + nums[left] + nums[right]
+            if total == 0:
+                result.add((nums[i], nums[left], nums[right]))
+                left += 1
+                right -= 1
+            elif total < 0:
+                left += 1
+            else:
+                right -= 1
+
+    return list(result)
+
+# Example usage
+nums = [-2, 0, 1, 1, -1]
+triplets = three_sum(nums)
+print("Unique triplets with sum 0:", triplets)
+
+Output:
+
+Unique triplets with sum 0: [(-2, 1, 1), (-1, 0, 1)]
+
+Explanation:
+
+It sorts the list to handle duplicates efficiently.
+
+Uses a 2-pointer technique to find combinations that sum to 0.
+
+The result is stored as a set to avoid duplicate triplets.
+
+
+Let me know if you want a version with no sorting or an ADF pipeline implementation for similar logic.
+
