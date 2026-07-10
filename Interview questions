@@ -10,6 +10,68 @@ print(18//10)
 1
 Integer division removes the decimal not rounds off.
 
+Q) Different ways of print
+
+print can take any number of arguments 
+
+print(1,2,3,'test')
+1 2 3 test
+
+wit a delimiter , below sep is not a keyword
+print("A", "B", "C", sep="-")
+A-B-C 
+
+print("Hello")
+print("world!")
+print('test')
+Hello
+world!
+test
+
+print("Hello", end=";")
+print("world!")
+print('test')
+Hello;world!
+test
+
+f strings 
+name = "Alice"
+age = 30
+print(f"{name} is {age} years old.")
+Alice is 30 years old.
+
+format 
+
+name = "Alice"
+age = 30
+print("{} is {} years old.".format(name, age))
+
+
+Q) List out all the keywords of python using a program
+
+import keyword
+
+print(keyword.kwlist)
+print(f"Total keywords: {len(keyword.kwlist)}")
+
+['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+Total keywords: 35
+
+=== Code Execution Successful ===
+
+Q) convert integer to hexa decimal 
+
+
+Q)  List out all the methods applicable for list ?
+print(dir(list))
+is below some contains __ and some dont 
+__..__ are python in built methods 
+others are normal methods which develpers can use
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', 
+'__getitem__', '__getstate__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__',
+'__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append',
+'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+
 
 Q) Difference between append and extend on lists 
 
@@ -34,7 +96,7 @@ l.extend(5)
 print(l)
 
 List vs set vs tuple vs dictionary 
-
+create a table with below parameters
 Ordered, indexed 
 mutable 
 duplicates allowed or not
