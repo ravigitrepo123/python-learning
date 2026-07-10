@@ -1,74 +1,15 @@
 
-Reverse a string.
-Reverse a list.
-Check palindrome.
-Find factorial.
-Fibonacci series.
-Find duplicates in a list.
-Remove duplicates.
-Count character frequency.
-Find second largest number.
-Find missing number.
-Check if two strings are anagrams.
-Merge two dictionaries.
-Sort a dictionary by value.
-Count vowels.
-Find the first non-repeating character.
-Flatten a nested list.
-Find common elements in two lists.
-Rotate a list.
-Swap two numbers without a third variable.
-Count words in a sentence.
 
+Q) Difference between / and //
 
-Q) Python code: Given a list something [-2, 0, 1, 1, -1] write a program that gives unique number such as a + b + c = 0, where a, b, and c are numbers from the above list."
+/ is float division 
+// is integer division 
+print(18/10)
+1.8
+print(18//10)
+1
+Integer division removes the decimal not rounds off.
 
-Sol)
-This is a variation of the 3-sum problem, where you find all unique triplets in the list that sum up to zero.
-
-Here’s a Python solution:
-
-def three_sum(nums):
-    nums.sort()
-    result = set()
-    n = len(nums)
-
-    for i in range(n):
-        left = i + 1
-        right = n - 1
-
-        while left < right:
-            total = nums[i] + nums[left] + nums[right]
-            if total == 0:
-                result.add((nums[i], nums[left], nums[right]))
-                left += 1
-                right -= 1
-            elif total < 0:
-                left += 1
-            else:
-                right -= 1
-
-    return list(result)
-
-# Example usage
-nums = [-2, 0, 1, 1, -1]
-triplets = three_sum(nums)
-print("Unique triplets with sum 0:", triplets)
-
-Output:
-
-Unique triplets with sum 0: [(-2, 1, 1), (-1, 0, 1)]
-
-Explanation:
-
-It sorts the list to handle duplicates efficiently.
-
-Uses a 2-pointer technique to find combinations that sum to 0.
-
-The result is stored as a set to avoid duplicate triplets.
-
-
-Let me know if you want a version with no sorting or an ADF pipeline implementation for similar logic.
 
 Q) Difference between append and extend on lists 
 
@@ -184,9 +125,96 @@ Memory efficient.
 
 Q) Decorator 
 
-def decorator(func):
-    def wrapper():
-        print("Before")
-        func()
-        print("After")
+def my_decorator(func):
+    def wrapper(*args, **kwargs):
+        print("Before calling function")
+        result = func(*args, **kwargs)
+        print("After calling function")
+        return result
     return wrapper
+
+@my_decorator
+def say_hello(name):
+    print(f"Hello, {name}!")
+
+say_hello("Alice")
+
+Before calling function
+Hello, Alice!
+After calling function
+
+Q) Difference between break, continue, and pass
+break: Exit loop.
+continue: Skip current iteration.
+pass: Do nothing.
+
+
+practical questions
+
+Reverse a string.
+Reverse a list.
+Check palindrome.
+Find factorial.
+Fibonacci series.
+Find duplicates in a list.
+Remove duplicates.
+Count character frequency.
+Find second largest number.
+Find missing number.
+Check if two strings are anagrams.
+Merge two dictionaries.
+Sort a dictionary by value.
+Count vowels.
+Find the first non-repeating character.
+Flatten a nested list.
+Find common elements in two lists.
+Rotate a list.
+Swap two numbers without a third variable.
+Count words in a sentence.
+
+
+Q) Python code: Given a list something [-2, 0, 1, 1, -1] write a program that gives unique number such as a + b + c = 0, where a, b, and c are numbers from the above list."
+
+Sol)
+This is a variation of the 3-sum problem, where you find all unique triplets in the list that sum up to zero.
+
+Here’s a Python solution:
+
+def three_sum(nums):
+    nums.sort()
+    result = set()
+    n = len(nums)
+
+    for i in range(n):
+        left = i + 1
+        right = n - 1
+
+        while left < right:
+            total = nums[i] + nums[left] + nums[right]
+            if total == 0:
+                result.add((nums[i], nums[left], nums[right]))
+                left += 1
+                right -= 1
+            elif total < 0:
+                left += 1
+            else:
+                right -= 1
+
+    return list(result)
+
+# Example usage
+nums = [-2, 0, 1, 1, -1]
+triplets = three_sum(nums)
+print("Unique triplets with sum 0:", triplets)
+
+Output:
+
+Unique triplets with sum 0: [(-2, 1, 1), (-1, 0, 1)]
+
+Explanation:
+
+It sorts the list to handle duplicates efficiently.
+
+Uses a 2-pointer technique to find combinations that sum to 0.
+
+The result is stored as a set to avoid duplicate triplets.
