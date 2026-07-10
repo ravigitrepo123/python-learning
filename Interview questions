@@ -250,6 +250,13 @@ dict2 = {"b": 20, "c": 3}
 merged = {**dict1, **dict2}
 
 print(merged)
+
+{'a': 1, 'b': 20, 'c': 3}
+{'a': 1, 'b': 20, 'c': 3}
+{'a': 1, 'b': 20, 'c': 3}
+
+=== Code Execution Successful ===
+
 Sort a dictionary by value.
 Count vowels.
 Find the first non-repeating character.
