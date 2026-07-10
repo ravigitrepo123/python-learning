@@ -1,6 +1,29 @@
 
-Python code: Given a list something [-2, 0, 1, 1, -1] write a program that gives unique number such as a + b + c = 0, where a, b, and c are numbers from the above list."
+Reverse a string.
+Reverse a list.
+Check palindrome.
+Find factorial.
+Fibonacci series.
+Find duplicates in a list.
+Remove duplicates.
+Count character frequency.
+Find second largest number.
+Find missing number.
+Check if two strings are anagrams.
+Merge two dictionaries.
+Sort a dictionary by value.
+Count vowels.
+Find the first non-repeating character.
+Flatten a nested list.
+Find common elements in two lists.
+Rotate a list.
+Swap two numbers without a third variable.
+Count words in a sentence.
 
+
+Q) Python code: Given a list something [-2, 0, 1, 1, -1] write a program that gives unique number such as a + b + c = 0, where a, b, and c are numbers from the above list."
+
+Sol)
 This is a variation of the 3-sum problem, where you find all unique triplets in the list that sum up to zero.
 
 Here’s a Python solution:
@@ -47,3 +70,123 @@ The result is stored as a set to avoid duplicate triplets.
 
 Let me know if you want a version with no sorting or an ADF pipeline implementation for similar logic.
 
+Q) Difference between append and extend on lists 
+
+sol) 
+append accepts both list and  any object. Extend accepts only  list. 
+l=[1,2]
+
+l.append([3,4])
+# [1,2,[3,4]]
+print(l)
+
+l.append(5)
+[1, 2, [3, 4], 5]
+print(l)
+
+l=[1,2]
+l.extend([3,4])
+print(l)
+
+l.extend(5)
+# Error  int objct is not iterable
+print(l)
+
+List vs set vs tuple vs dictionary 
+
+Ordered, indexed 
+mutable 
+duplicates allowed or not
+format 
+
+
+Q)  == , is and =
+
+
+Q) What are *args and **kwargs?
+
+def add(*args):
+    print(args)
+    print(type(args))
+
+
+add(1,2,3)
+(1, 2, 3)
+<class 'tuple'>
+
+def info(**kwargs):
+    print(kwargs)
+    print(type(kwargs))
+
+info(name="Ravi",age=35)
+
+Result : 
+{'name': 'Ravi', 'age': 35}
+<class 'dict'>
+
+Q) What is lambda?
+
+Anonymous function.
+square=lambda x:x*x
+
+print(square(5))
+
+Q) filter 
+numbers=[1,2,3,4]
+
+result=list(filter(lambda x:x%2==0,numbers))
+ do with a function also
+
+Q) reduce
+from functools import reduce
+
+reduce(lambda x,y:x+y,[1,2,3,4])
+
+Q) List Comprehension , Dictionary Comprehension
+
+squares=[x*x for x in range(5)]
+d={x:x*x for x in range(5)}
+
+
+Q) Exception handling 
+try:
+    print(10/0)
+
+except ZeroDivisionError:
+    print("Cannot divide")
+
+finally:
+    print("Done")
+
+Q) Difference between deep copy and shallow copy
+
+Shallow copy copies references for nested objects.
+
+Deep copy creates completely independent copies.
+
+import copy
+
+a=[[1,2],[3,4]]
+
+b=copy.copy(a)
+
+c=copy.deepcopy(a)
+
+Q) What is a Generator?
+
+Uses yield.
+
+def gen():
+    for i in range(5):
+        yield i
+
+Memory efficient.
+
+Q) Decorator 
+
+def decorator(func):
+    def wrapper():
+        print("Before")
+        func()
+        print("After")
+    return wrapper
