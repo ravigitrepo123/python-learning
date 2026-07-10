@@ -233,6 +233,13 @@ Find common elements in two lists.
 Rotate a list.
 Swap two numbers without a third variable.
 Count words in a sentence.
+How do you flatten a 2Dimnesional list aeg: 
+nested = [[1, 2], [3, 4], [5, 6]]
+
+flat = [item for sublist in nested for item in sublist]
+
+print(flat)
+[1, 2, 3, 4, 5, 6]
 
 
 Q) Python code: Given a list something [-2, 0, 1, 1, -1] write a program that gives unique number such as a + b + c = 0, where a, b, and c are numbers from the above list."
