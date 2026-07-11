@@ -238,6 +238,31 @@ print(l[::-1])
 [3, 2, 1]
 
 
+convert a string to a list , each character, each word,  separated by delimiter 
+
+by character 
+s = "Python"
+result = list(s)
+
+print(result)
+
+['P', 'y', 't', 'h', 'o', 'n']
+
+by word or space delimiter 
+s = "I love Python"
+result = s.split()
+
+print(result)
+
+['I', 'love', 'Python']
+
+by a specific delimiter
+s = "apple,banana,orange"
+result = s.split(",")
+
+print(result)
+
+['apple', 'banana', 'orange']
 Check palindrome.
 Find factorial.
 Fibonacci series.
