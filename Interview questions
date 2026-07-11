@@ -73,6 +73,15 @@ print(dir(str))
 
 === Code Execution Successful ===
 
+examples :
+
+s = "Ravi, kumar"
+s.upper()
+s.find('a')
+s.split()
+s.split(',')
+
+
 Q) convert integer to hexa decimal 
 
 
