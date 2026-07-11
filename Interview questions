@@ -122,6 +122,9 @@ Q)  == , is and =
 
 Q) What are *args and **kwargs?
 
+*args is a tuple 
+**kwargs is a dictionary 
+
 def add(*args):
     print(args)
     print(type(args))
