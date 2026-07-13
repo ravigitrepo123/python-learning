@@ -275,6 +275,37 @@ result = s.split(",")
 print(result)
 
 ['apple', 'banana', 'orange']
+
+package vs sub package vs module vs class vs method
+
+method is a function, reused by calling it.generally it lies inside class but not mandatory.
+
+class contains set of functions,  variables.
+example : 
+
+module is a single Python file saved as module_name.py it can contain set of classes , functions..
+example : math , random, 
+
+package is a folder contains set of modules or .py scripts in it
+exampe : pyspark , numpy , pandas 
+
+
+sub packages are folders inside another folder or package 
+
+
+from pyspark.sql import SparkSession
+here pyspark is pkg
+sql is subpackage 
+session is a module (session.py)
+Sparksession is a class.
+SparkSession class is reexported in sql subpackage __init__.py file 
+so 
+from pyspark.sql.session import SparkSession 
+and 
+from pyspark.sql import SparkSession
+both points to same class
+
+
 Check palindrome.
 Find factorial.
 Fibonacci series.
