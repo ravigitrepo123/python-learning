@@ -1,0 +1,4 @@
+add vs append vs extend
+enumerate(list1)
+Pop vs remove 
+join 
