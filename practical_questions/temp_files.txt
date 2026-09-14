@@ -1,1 +1,44 @@
 
+Question 2: Memory-Efficient Large File Processing (Core DE)
+In Data Engineering, reading massive CSV/text files directly into memory using .readlines() or .read() can crash your pipeline.
+
+Task: Write a generator function read_large_file(file_path, chunk_size=100) that streams a large file line-by-line, yielding a list (chunk) of lines of size chunk_size at a time. Demonstrate how you would iterate through this generator to process data without overloading RAM.
+
+Question 3: Data Transformation & Aggregation (Intermediate)
+Suppose you have a list of transaction records:
+
+Python
+transactions = [
+    {"user_id": 1, "category": "Electronics", "amount": 120.0},
+    {"user_id": 2, "category": "Groceries", "amount": 45.0},
+    {"user_id": 1, "category": "Electronics", "amount": 80.0},
+    {"user_id": 3, "category": "Groceries", "amount": 150.0},
+    {"user_id": 2, "category": "Electronics", "amount": 200.0},
+]
+Task: Using pure Python (without Pandas), write a function aggregate_spending(transactions) that computes:
+
+Total amount spent per user_id.
+
+Highest single spending category per user_id.
+
+Return the result as a nested dictionary or list of dicts.
+
+Question 4: Exception Handling & Retries (Production Readiness)
+API requests or database connections in ETL pipelines often fail intermittently.
+
+Task: Write a custom decorator @retry(max_retries=3, delay=2) that wraps any data extraction function. If the wrapped function raises an exception, the decorator should log the error, wait for delay seconds, and retry up to max_retries times. If it still fails after the maximum retries, raise the exception.
+
+Question 5: Pandas / PySpark Logic (Data Pipeline Simulation)
+Given two datasets:
+
+Users: [{"user_id": 1, "name": "Alice"}, {"user_id": 2, "name": "Bob"}]
+
+Orders: [{"order_id": 101, "user_id": 1, "status": "COMPLETED"}, {"order_id": 102, "user_id": 1, "status": "PENDING"}, {"order_id": 103, "user_id": 3, "status": "COMPLETED"}]
+
+Task: Write code (using either Pandas or PySpark) to:
+
+Perform an Inner Join between Users and Orders on user_id.
+
+Filter for orders where status == "COMPLETED".
+
+Handle missing/unmatched records cleanly.
