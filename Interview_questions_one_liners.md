@@ -251,6 +251,8 @@ fnc_even logic should give true for even  input value, false for output value.
 
 filter keyword filters data in l1 by applying function fnc_even to list l1
 
+filter returns filter object not list, we must convert it to list 
+
 using lambda
 
 numbers=[1,2,3,4]
