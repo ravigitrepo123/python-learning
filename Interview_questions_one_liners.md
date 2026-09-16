@@ -290,7 +290,7 @@ d={x:x*x for x in range(5)}
 
 **Answer:**
 
-```text
+
 Exception handling in Python manages runtime errors gracefully using **try, except, else, and finally** blocks, preventing your program from crashing unexpectedly.
 try:
     # Code that might raise an exception
@@ -355,7 +355,7 @@ try:
     account.withdraw(150.00)  # This will trigger the exception
 except InsufficientFundsError as e:
     print(f"Transaction Failed -> {e}")
-```
+
 # Common Python Built-in Exceptions
 
 | Exception                         | Exception Category | Primary Cause                                                                     | Example Trigger                                   |
@@ -380,6 +380,8 @@ except InsufficientFundsError as e:
 | **`KeyboardInterrupt`**   | User Input         | User interrupts program execution (typically by pressing`Ctrl+C`).              | Pressing`Ctrl+C` in terminal                    |
 | **`MemoryError`**         | Resource           | System runs out of RAM during an operation.                                       | Creating an impossibly massive list in RAM        |
 
+```text
+
 BaseException
  ├── KeyboardInterrupt
  ├── SystemExit
@@ -398,7 +400,7 @@ BaseException
       ├── TypeError
       └── ValueError
 
-
+```
 
 [Back to Table of Contents](#table-of-contents)
 
