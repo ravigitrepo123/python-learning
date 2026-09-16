@@ -1,9 +1,4 @@
 
-Question 2: Memory-Efficient Large File Processing (Core DE)
-In Data Engineering, reading massive CSV/text files directly into memory using .readlines() or .read() can crash your pipeline.
-
-Task: Write a generator function read_large_file(file_path, chunk_size=100) that streams a large file line-by-line, yielding a list (chunk) of lines of size chunk_size at a time. Demonstrate how you would iterate through this generator to process data without overloading RAM.
-
 Question 3: Data Transformation & Aggregation (Intermediate)
 Suppose you have a list of transaction records:
 
