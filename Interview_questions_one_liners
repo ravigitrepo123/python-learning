@@ -1,7 +1,7 @@
 
 
 Q) Difference between / and //
-
+S)
 / is float division 
 // is integer division 
 print(18/10)
@@ -11,13 +11,13 @@ print(18//10)
 Integer division removes the decimal not rounds off.
 
 Q) Different ways of print
-
+S)
 print can take any number of arguments 
 
 print(1,2,3,'test')
 1 2 3 test
 
-wit a delimiter , below sep is not a keyword
+with a delimiter , below sep is not a keyword
 print("A", "B", "C", sep="-")
 A-B-C 
 
@@ -48,7 +48,7 @@ print("{} is {} years old.".format(name, age))
 
 
 Q) List out all the keywords of python using a program
-
+s)
 import keyword
 
 print(keyword.kwlist)
@@ -60,7 +60,7 @@ Total keywords: 35
 === Code Execution Successful ===
 
 Q) string and slicing 
-
+s)
 nm = "Ravikumar"
 nm[::] same as nm
 nn[::-1] reverse
@@ -83,9 +83,10 @@ s.split(',')
 
 
 Q) convert integer to hexa decimal 
-
+s)
 
 Q)  List out all the methods applicable for list ?
+s)
 print(dir(list))
 is below some contains __ and some dont 
 __..__ are python in built methods 
@@ -97,8 +98,7 @@ others are normal methods which develpers can use
 
 
 Q) Difference between append and extend on lists 
-
-sol) 
+s) 
 append accepts both list and  any object. Extend accepts only  list. 
 l=[1,2]
 
@@ -126,7 +126,7 @@ duplicates allowed or not
 format 
 
 
-Q)  == , is and =
+Q) difference between  == , is and =
 
 
 Q) What are *args and **kwargs?
@@ -154,30 +154,33 @@ Result :
 <class 'dict'>
 
 Q) What is lambda?
-
+S)
 Anonymous function.
 square=lambda x:x*x
 
 print(square(5))
 
 Q) filter 
+S)
 numbers=[1,2,3,4]
 
 result=list(filter(lambda x:x%2==0,numbers))
  do with a function also
 
 Q) reduce
+S)
 from functools import reduce
 
 reduce(lambda x,y:x+y,[1,2,3,4])
 
 Q) List Comprehension , Dictionary Comprehension
-
+S)
 squares=[x*x for x in range(5)]
 d={x:x*x for x in range(5)}
 
 
 Q) Exception handling 
+S)
 try:
     print(10/0)
 
@@ -188,7 +191,7 @@ finally:
     print("Done")
 
 Q) Difference between deep copy and shallow copy
-
+S)
 Shallow copy copies references for nested objects.
 
 Deep copy creates completely independent copies.
@@ -202,17 +205,17 @@ b=copy.copy(a)
 c=copy.deepcopy(a)
 
 Q) What is a Generator?
-
+S)
 Uses yield.
 
 def gen():
     for i in range(5):
         yield i
 
-Memory efficient.
+Benefit : Memory efficient, used in reading very large files in chunks
 
 Q) Decorator 
-
+S)
 def my_decorator(func):
     def wrapper(*args, **kwargs):
         print("Before calling function")
@@ -232,14 +235,14 @@ Hello, Alice!
 After calling function
 
 Q) Difference between break, continue, and pass
+S)
 break: Exit loop.
 continue: Skip current iteration.
 pass: Do nothing.
 
 
-practical questions
-
-Reverse a string.
+Q) Reverse a string.
+S)
 l = "ravi"
 print(l[::-1])
 ivar
@@ -250,7 +253,8 @@ print(l[::-1])
 [3, 2, 1]
 
 
-convert a string to a list , each character, each word,  separated by delimiter 
+Q) convert a string or line to a list , each character, each word,  separated by delimiter 
+S)
 
 by character 
 s = "Python"
@@ -276,8 +280,8 @@ print(result)
 
 ['apple', 'banana', 'orange']
 
-package vs sub package vs module vs class vs method
-
+Q) package vs sub package vs module vs class vs method
+S)
 method is a function, reused by calling it.generally it lies inside class but not mandatory.
 
 class contains set of functions,  variables.
@@ -306,16 +310,35 @@ from pyspark.sql import SparkSession
 both points to same class
 
 
-Check palindrome.
-Find factorial.
-Fibonacci series.
-Find duplicates in a list.
-Remove duplicates.
-Count character frequency.
-Find second largest number.
-Find missing number.
-Check if two strings are anagrams.
-Merge two dictionaries.
+Q) Check palindrome.
+S)
+
+Q) Find factorial.
+S)
+
+Q) Fibonacci series.
+S)
+
+Q) Find duplicates in a list.
+S)
+
+Q) Remove duplicates.
+S)
+
+Q) Count character frequency.
+S)
+
+Q) Find second largest number.
+S)
+
+Q) Find missing number.
+S)
+
+Q) Check if two strings are anagrams.
+S)
+
+Q) Merge two dictionaries.
+S)
 
 # pipe method 
 dict1 = {"a": 1, "b": 2}
@@ -348,15 +371,43 @@ print(merged)
 
 === Code Execution Successful ===
 
-Sort a dictionary by value.
-Count vowels.
-Find the first non-repeating character.
-Flatten a nested list.
-Find common elements in two lists.
-Rotate a list.
-Swap two numbers without a third variable.
-Count words in a sentence.
-How do you flatten a 2Dimnesional list aeg: 
+Q) Sort a dictionary by value.
+S) 
+
+Q) Count vowels.
+S)
+
+Q) Find the first non-repeating character.
+S)
+
+Q) Flatten a nested list.
+S) 
+
+Q) Find common elements in two lists.
+S) 
+
+Q) Rotate a list.
+S)
+
+Q) Swap two numbers without a third variable.
+S)
+
+Q) Count words in a sentence.
+S)  
+sntc = "Ravi kumar goud is  me"
+print(len(sntc.split(" ")))
+#gives 6 becuase there is a double space
+
+sntc = "Ravi kumar goud is  me"
+l = sntc.strip().split(" ")
+count = 0
+for i in l:
+    if i != "":
+        count += 1
+print(count)
+
+Q) How do you flatten a 2Dimnesional list aeg: 
+S)
 nested = [[1, 2], [3, 4], [5, 6]]
 
 flat = [item for sublist in nested for item in sublist]
@@ -364,10 +415,17 @@ flat = [item for sublist in nested for item in sublist]
 print(flat)
 [1, 2, 3, 4, 5, 6]
 
+nested = [[1, 2], [3, 4], [5, 6]]
+new_list = []
+for i in nested:
+    for j in i:
+        new_list.append(j)
+print(new_list)  # Output: [1, 2, 3, 4, 5, 6]
 
-Q) Python code: Given a list something [-2, 0, 1, 1, -1] write a program that gives unique number such as a + b + c = 0, where a, b, and c are numbers from the above list."
 
-Sol)
+Q) 3-sum problem in a list
+S)
+Python code: Given a list something [-2, 0, 1, 1, -1] write a program that gives unique number such as a + b + c = 0, where a, b, and c are numbers from the above list."
 This is a variation of the 3-sum problem, where you find all unique triplets in the list that sum up to zero.
 
 Here’s a Python solution:
