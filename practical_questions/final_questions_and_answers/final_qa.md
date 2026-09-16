@@ -1,4 +1,4 @@
-+ [Read a large log file, without memory issues and find errors ](#)
++ [Read a large log file, without memory issues and find errors ](#read-a-large-log-file-without-memory-issues-and-find-errors)
 + [String parsing and Data cleansing and data extraction from a log ](#string-parsing-and-data-cleansing-and-data-extraction-from-a-log)
 
 ## Read a large log file, without memory issues and find errors
