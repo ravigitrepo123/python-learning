@@ -355,7 +355,7 @@ try:
     account.withdraw(150.00)  # This will trigger the exception
 except InsufficientFundsError as e:
     print(f"Transaction Failed -> {e}")
-
+```
 # Common Python Built-in Exceptions
 
 | Exception                         | Exception Category | Primary Cause                                                                     | Example Trigger                                   |
@@ -398,7 +398,7 @@ BaseException
       ├── TypeError
       └── ValueError
 
-```
+
 
 [Back to Table of Contents](#table-of-contents)
 
