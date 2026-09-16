@@ -291,14 +291,113 @@ d={x:x*x for x in range(5)}
 **Answer:**
 
 ```text
+Exception handling in Python manages runtime errors gracefully using **try, except, else, and finally** blocks, preventing your program from crashing unexpectedly.
 try:
-    print(10/0)
-
-except ZeroDivisionError:
-    print("Cannot divide")
-
+    # Code that might raise an exception
+    file = open("data.txt", "r")
+    value = int(file.readline())
+except FileNotFoundError:
+    # Runs ONLY if FileNotFoundError occurs
+    print("Error: The specified file could not be found.")
+except ValueError:
+    # Runs ONLY if int conversion fails
+    print("Error: Could not convert file content to an integer.")
+else:
+    # Runs ONLY if NO exceptions were raised in try
+    print(f"Successfully read value: {value}")
 finally:
-    print("Done")
+    # ALWAYS runs, regardless of whether an exception occurred
+    print("Execution complete. Cleaning up resources...")
+    try:
+        file.close()
+    except NameError:
+        pass
+
+Catch Specific Exceptions: Always catch specific error types (ValueError, KeyError, TypeError) instead of a bare except: block. A broad except: catches unintended errors (like KeyboardInterrupt or SystemExit) and hides bugs.
+
+**Catching Multiple Exceptions**: Catch multiple error types in one block by passing them as a tuple:
+
+except (ValueError, TypeError) as error:
+    print(f"Invalid input: {error}")
+
+**Raise exception**
+
+if age < 0:
+    raise ValueError("Age cannot be a negative number.")
+
+
+**custom exception**
+
+class InsufficientFundsError(Exception):
+    """Raised when account balance is lower than withdrawal amount."""
+    pass
+
+
+class BankAccount:
+    def __init__(self, balance: float):
+        self.balance = balance
+
+    def withdraw(self, amount: float):
+        if amount > self.balance:
+            # Raise the custom exception with a descriptive error message
+            raise InsufficientFundsError(
+                f"Cannot withdraw ${amount:.2f}. Available balance: ${self.balance:.2f}"
+            )
+        
+        self.balance -= amount
+        print(f"Successfully withdrew ${amount:.2f}. Remaining balance: ${self.balance:.2f}")
+
+
+# Demonstration & Exception Handling
+account = BankAccount(balance=100.00)
+
+try:
+    account.withdraw(150.00)  # This will trigger the exception
+except InsufficientFundsError as e:
+    print(f"Transaction Failed -> {e}")
+
+# Common Python Built-in Exceptions
+
+| Exception                         | Exception Category | Primary Cause                                                                     | Example Trigger                                   |
+| :-------------------------------- | :----------------- | :-------------------------------------------------------------------------------- | :------------------------------------------------ |
+| **`SyntaxError`**         | Parser             | Invalid Python syntax that cannot be parsed.                                      | `if True` (missing colon)                       |
+| **`IndentationError`**    | Parser             | Incorrect or inconsistent indentation.                                            | Mixing spaces and tabs or wrong spacing.          |
+| **`NameError`**           | Scope              | Accessing a variable or function name before it is defined.                       | `print(x)` when `x` isn't assigned            |
+| **`TypeError`**           | Type/Operation     | Applying an operation or function to an object of an inappropriate type.          | `"hello" + 5`                                   |
+| **`ValueError`**          | Data/Arguments     | A function receives an argument with the right type but an invalid value.         | `int("abc")`                                    |
+| **`AttributeError`**      | Object Access      | Attempting to access an attribute or method that an object doesn't possess.       | `"string".append("x")`                          |
+| **`IndexError`**          | Sequence           | Attempting to access a list, tuple, or sequence with an out-of-bounds index.      | `lst = [1, 2]; lst[5]`                          |
+| **`KeyError`**            | Mapping            | Attempting to access a dictionary key that does not exist.                        | `d = {"a": 1}; d["b"]`                          |
+| **`ZeroDivisionError`**   | Arithmetic         | Attempting to divide or modulo a number by zero.                                  | `10 / 0`                                        |
+| **`OverflowError`**       | Arithmetic         | Calculation result exceeds the maximum limit for a numeric type.                  | `math.exp(1000)`                                |
+| **`FileNotFoundError`**   | I/O & OS           | Attempting to access or open a file path that does not exist on disk.             | `open("missing.txt", "r")`                      |
+| **`PermissionError`**     | I/O & OS           | Attempting an OS action without adequate permissions.                             | Writing to a read-only or restricted system file. |
+| **`FileExistsError`**     | I/O & OS           | Attempting to create a directory or file that already exists.                     | `os.mkdir("existing_folder")`                   |
+| **`ImportError`**         | System             | Module or package import fails.                                                   | `import nonexistent_module`                     |
+| **`ModuleNotFoundError`** | System             | Subclass of`ImportError`; raised when a module cannot be found in `sys.path`. | `import missing_lib`                            |
+| **`StopIteration`**       | Iteration          | Signal raised by`next()` to indicate an iterator has no further items.          | `next(iter([]))`                                |
+| **`RecursionError`**      | Runtime            | Maximum recursion depth exceeded (e.g., infinite recursion).                      | `def f(): f(); f()`                             |
+| **`KeyboardInterrupt`**   | User Input         | User interrupts program execution (typically by pressing`Ctrl+C`).              | Pressing`Ctrl+C` in terminal                    |
+| **`MemoryError`**         | Resource           | System runs out of RAM during an operation.                                       | Creating an impossibly massive list in RAM        |
+
+BaseException
+ ├── KeyboardInterrupt
+ ├── SystemExit
+ └── Exception
+      ├── ArithmeticError
+      │    └── ZeroDivisionError
+      │    └── OverflowError
+      ├── AttributeException -> AttributeError
+      ├── LookupError
+      │    ├── IndexError
+      │    └── KeyError
+      ├── OSError
+      │    ├── FileNotFoundError
+      │    ├── PermissionError
+      │    └── FileExistsError
+      ├── TypeError
+      └── ValueError
+
 ```
 
 [Back to Table of Contents](#table-of-contents)
