@@ -1,6 +1,6 @@
 + [Read a large log file, without memory issues and find errors ](#read-a-large-log-file-without-memory-issues-and-find-errors)
 + [String parsing and Data cleansing and data extraction from a log ](#string-parsing-and-data-cleansing-and-data-extraction-from-a-log)
-+ [Data Transformation & Aggregation](#)
++ [Data Transformation & Aggregation](#data-transformation--aggregations)
 
 ## Read a large log file, without memory issues and find errors
 Write a generator function read_large_file(file_path, chunk_size=100) that streams a large file line-by-line, yielding a list (chunk) of lines of size chunk_size at a time. Demonstrate how you would iterate through this generator to process data without overloading RAM, and extract errors
