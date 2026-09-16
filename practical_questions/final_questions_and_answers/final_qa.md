@@ -1,5 +1,6 @@
 + [Read a large log file, without memory issues and find errors ](#read-a-large-log-file-without-memory-issues-and-find-errors)
 + [String parsing and Data cleansing and data extraction from a log ](#string-parsing-and-data-cleansing-and-data-extraction-from-a-log)
++ [Data Transformation & Aggregation[(#)
 
 ## Read a large log file, without memory issues and find errors
 Write a generator function read_large_file(file_path, chunk_size=100) that streams a large file line-by-line, yielding a list (chunk) of lines of size chunk_size at a time. Demonstrate how you would iterate through this generator to process data without overloading RAM, and extract errors
@@ -17,3 +18,17 @@ user_id (as integer)\
 action (as string)\
 amount (as float)\
 [String_Parsing_and_Data_Cleaning.py](https://github.com/ravigitrepo123/python-learning/blob/main/practical_questions/scripts/String_Parsing_and_Data_Cleaning.py)
+
+## Data Transformation & Aggregations
+Task: Using pure Python (without Pandas), write a function aggregate_spending(transactions) that computes:\
+Total amount spent per user_id.\
+Highest single spending category per user_id.\
+Return the result as a nested dictionary or list of dicts.\
+transactions = [ \
+    {"user_id": 1, "category": "Electronics", "amount": 120.0},\
+    {"user_id": 2, "category": "Groceries", "amount": 45.0},\
+    {"user_id": 1, "category": "Electronics", "amount": 80.0},\
+    {"user_id": 3, "category": "Groceries", "amount": 150.0},\
+    {"user_id": 2, "category": "Electronics", "amount": 200.0},\
+    {"user_id": 1, "category": "Groceries", "amount": 145.0},\
+]
