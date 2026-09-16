@@ -292,6 +292,7 @@ d={x:x*x for x in range(5)}
 
 
 Exception handling in Python manages runtime errors gracefully using **try, except, else, and finally** blocks, preventing your program from crashing unexpectedly.
+```text
 try:
     # Code that might raise an exception
     file = open("data.txt", "r")
@@ -315,19 +316,18 @@ finally:
 
 Catch Specific Exceptions: Always catch specific error types (ValueError, KeyError, TypeError) instead of a bare except: block. A broad except: catches unintended errors (like KeyboardInterrupt or SystemExit) and hides bugs.
 
-**Catching Multiple Exceptions**: Catch multiple error types in one block by passing them as a tuple:
+```text
+**Catching Multiple Exceptions**  Catch multiple error types in one block by passing them as a tuple:
 
 except (ValueError, TypeError) as error:
     print(f"Invalid input: {error}")
 
 **Raise exception**
-
 if age < 0:
     raise ValueError("Age cannot be a negative number.")
 
 
 **custom exception**
-
 class InsufficientFundsError(Exception):
     """Raised when account balance is lower than withdrawal amount."""
     pass
@@ -348,7 +348,7 @@ class BankAccount:
         print(f"Successfully withdrew ${amount:.2f}. Remaining balance: ${self.balance:.2f}")
 
 
-# Demonstration & Exception Handling
+Demonstration & Exception Handling
 account = BankAccount(balance=100.00)
 
 try:
@@ -356,7 +356,7 @@ try:
 except InsufficientFundsError as e:
     print(f"Transaction Failed -> {e}")
 
-# Common Python Built-in Exceptions
+Common Python Built-in Exceptions
 
 | Exception                         | Exception Category | Primary Cause                                                                     | Example Trigger                                   |
 | :-------------------------------- | :----------------- | :-------------------------------------------------------------------------------- | :------------------------------------------------ |
