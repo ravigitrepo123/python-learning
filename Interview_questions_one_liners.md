@@ -243,6 +243,16 @@ print(square(5))
 **Answer:**
 
 ```text
+
+syntax : filter(function, iterable)
+
+example : filter(fnc_even,l1)
+fnc_even logic should give true for even  input value, false for output value. 
+
+filter keyword filters data in l1 by applying function fnc_even to list l1
+
+using lambda
+
 numbers=[1,2,3,4]
 
 result=list(filter(lambda x:x%2==0,numbers))
