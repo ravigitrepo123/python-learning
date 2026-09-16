@@ -315,19 +315,20 @@ finally:
         pass
 
 Catch Specific Exceptions: Always catch specific error types (ValueError, KeyError, TypeError) instead of a bare except: block. A broad except: catches unintended errors (like KeyboardInterrupt or SystemExit) and hides bugs.
+```
 
-```text
 **Catching Multiple Exceptions**  Catch multiple error types in one block by passing them as a tuple:
-
+```text
 except (ValueError, TypeError) as error:
     print(f"Invalid input: {error}")
-
+```
 **Raise exception**
+```text
 if age < 0:
     raise ValueError("Age cannot be a negative number.")
-
-
+```
 **custom exception**
+```text
 class InsufficientFundsError(Exception):
     """Raised when account balance is lower than withdrawal amount."""
     pass
@@ -355,6 +356,7 @@ try:
     account.withdraw(150.00)  # This will trigger the exception
 except InsufficientFundsError as e:
     print(f"Transaction Failed -> {e}")
+```
 
 Common Python Built-in Exceptions
 
