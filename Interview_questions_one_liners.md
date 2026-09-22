@@ -43,7 +43,7 @@
 - [Count words in a sentence.](#count-words-in-a-sentence)
 - [How do you flatten a 2Dimnesional list aeg:](#how-do-you-flatten-a-2dimnesional-list-aeg)
 - [3-sum problem in a list](#3-sum-problem-in-a-list)
-
+- [nlp in AI and its python libraries](#)
 ---
 
 ## Difference between / and //
@@ -822,5 +822,13 @@ Uses a 2-pointer technique to find combinations that sum to 0.
 
 The result is stored as a set to avoid duplicate triplets.
 ```
+
+[Back to Table of Contents](#table-of-contents)
+
+## NLP and its modules
+
+**Answer:**
+
+https://chatgpt.com/share/6ab24692-a0d0-83e8-a384-fe648dbb072b
 
 [Back to Table of Contents](#table-of-contents)
