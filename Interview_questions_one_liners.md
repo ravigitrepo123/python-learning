@@ -43,7 +43,7 @@
 - [Count words in a sentence.](#count-words-in-a-sentence)
 - [How do you flatten a 2Dimnesional list aeg:](#how-do-you-flatten-a-2dimnesional-list-aeg)
 - [3-sum problem in a list](#3-sum-problem-in-a-list)
-- [nlp in AI and its python libraries](#)
+- [nlp in AI and its python libraries](#nlp-and-its-modules)
 ---
 
 ## Difference between / and //
