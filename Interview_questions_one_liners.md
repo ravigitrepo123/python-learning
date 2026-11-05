@@ -241,7 +241,6 @@ print(square(5))
 
 ## what-is-map
 
-## filter
 
 **Answer:**
 
@@ -260,6 +259,8 @@ print(integers)  # Output: [10, 20, 30, 40]
 ```
 
 [Back to Table of Contents](#table-of-contents)
+
+## filter
 
 **Answer:**
 
