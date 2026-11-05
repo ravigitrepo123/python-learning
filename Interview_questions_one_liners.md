@@ -251,11 +251,25 @@ map(function, iterable, ...)
 
 result is a map object, you must convert to list/tuple ... to use or view it.
 
+# convert list values to upper 
+li=['dc','asd']
+
+lm = map(str.upper, li)
+
+lml = list(lm)
+
+print(lml)
+
+#output : ['DC','ASD'}
 # Convert a list of numeric strings into actual integers
 string_numbers = ['10', '20', '30', '40']
 integers = list(map(int, string_numbers))
 
 print(integers)  # Output: [10, 20, 30, 40]
+
+
+
+
 ```
 
 [Back to Table of Contents](#table-of-contents)
