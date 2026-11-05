@@ -12,6 +12,7 @@
 - [difference between  == , is and =](#difference-between-is-and-)
 - [What are *args and **kwargs?](#what-are-args-and-kwargs)
 - [What is lambda?](#what-is-lambda)
+- [What is map?](#what-is-map)
 - [filter](#filter)
 - [reduce](#reduce)
 - [List Comprehension , Dictionary Comprehension](#list-comprehension-dictionary-comprehension)
