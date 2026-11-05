@@ -250,6 +250,7 @@ The built-in map() function in Python applies a specified function to every item
 map(function, iterable, ...)
 
 result is a map object, you must convert to list/tuple ... to use or view it.
+A function can built in like upper, strip ,..   named function , anonymous function- lambda
 
 # convert list values to upper 
 li=['dc','asd']
