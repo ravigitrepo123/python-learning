@@ -239,7 +239,27 @@ print(square(5))
 
 [Back to Table of Contents](#table-of-contents)
 
+## what-is-map
+
 ## filter
+
+**Answer:**
+
+```text
+The built-in map() function in Python applies a specified function to every item of an iterable (like a list, tuple, or dictionary) and returns a lazy iterator (a map object)
+
+map(function, iterable, ...)
+
+result is a map object, you must convert to list/tuple ... to use or view it.
+
+# Convert a list of numeric strings into actual integers
+string_numbers = ['10', '20', '30', '40']
+integers = list(map(int, string_numbers))
+
+print(integers)  # Output: [10, 20, 30, 40]
+```
+
+[Back to Table of Contents](#table-of-contents)
 
 **Answer:**
 
