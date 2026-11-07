@@ -449,17 +449,20 @@ BaseException
 **Answer:**
 
 ```text
-Shallow copy copies references for nested objects.
+The core difference lies in how they handle nested objects: a shallow copy creates a new collection object but copies references to the nested objects inside it, while a deep copy recursively creates a brand new copy of everything, including all nested objects.
+Think of a shallow copy like sharing a house but getting your own key—if someone changes the furniture inside, you both see it. A deep copy is like building an exact replica of that house on a different plot of land; changes to one do not affect the other.
 
-Deep copy creates completely independent copies.
+Core Comparison
 
-import copy
 
-a=[[1,2],[3,4]]
+Feature	Shallow Copy (copy.copy())	Deep Copy (copy.deepcopy())
+New Top-Level Object	Yes (A new outer list/dict is created).	Yes (A new outer list/dict is created).
+New Nested Objects	No (It points to the exact same child objects).	Yes (It duplicates all child objects recursively).
+Memory Address (id())	Outer object changes; inner object IDs stay the same.	Outer object changes; inner object IDs change too.
+Performance	Fast and memory efficient.	Slower and consumes more memory for complex structures.
 
-b=copy.copy(a)
 
-c=copy.deepcopy(a)
+
 ```
 
 [Back to Table of Contents](#table-of-contents)
