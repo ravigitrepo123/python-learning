@@ -317,6 +317,8 @@ reduce(lambda x,y:x+y,[1,2,3,4])
 
 **Answer:**
 
+https://share.google/aimode/AuOmaMTgcQk2gIK3z
+
 ```text
 squares=[x*x for x in range(5)]
 d={x:x*x for x in range(5)}
