@@ -461,6 +461,27 @@ New Nested Objects	No (It points to the exact same child objects).	Yes (It dupli
 Memory Address (id())	Outer object changes; inner object IDs stay the same.	Outer object changes; inner object IDs change too.
 Performance	Fast and memory efficient.	Slower and consumes more memory for complex structures.
 
+import copy
+
+# A nested list (list inside a list)
+original = [[1, 2, 3], [4, 5, 6]]
+
+# 1. Create a shallow copy
+shallow = copy.copy(original)
+
+# 2. Create a deep copy
+deep = copy.deepcopy(original)
+
+# --- SCENARIO A: Modifying the top-level structure ---
+original.append([7, 8, 9])
+# Result: 'shallow' and 'deep' remain unchanged because the outer lists are distinct.
+
+# --- SCENARIO B: Modifying a nested object ---
+original[0][0] = 'X'
+# Result: 
+# original -> [['X', 2, 3], [4, 5, 6], [7, 8, 9]]
+# shallow  -> [['X', 2, 3], [4, 5, 6]]          <-- CHANGED!
+# deep     -> [[1, 2, 3], [4, 5, 6]
 
 
 ```
